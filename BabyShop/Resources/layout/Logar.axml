@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <TextView
+        android:text="LOGIN"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="360.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+IdLogar/lblLogin"
+        android:background="#ff0277bd"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="0.0dp"
+        android:layout_marginRight="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+IdLogar/lblMensagem"
+        android:gravity="center"
+        android:textColor="#0277BD"
+        android:layout_marginBottom="11.0dp"
+        android:background="@android:color/background_light"
+        android:textStyle="italic"
+        android:layout_marginTop="4.5dp"
+        android:textAllCaps="false" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="297.5dp"
+        android:id="@+IdLogar/llApp"
+        android:layout_marginLeft="5.0dp"
+        android:layout_marginRight="4.0dp"
+        android:layout_marginBottom="281.0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="373.5dp"
+            android:id="@+IdLogar/llControles"
+            android:background="#ffffffff"
+            android:layout_marginLeft="5.0dp"
+            android:layout_marginRight="4.0dp"
+            android:layout_marginBottom="159.0dp">
+            <TextView
+                android:text="E-mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+IdLogar/lblEmail"
+                android:layout_marginTop="7.0dp"
+                android:textColor="#000000" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+IdLogar/txtEmail"
+                android:background="#ffe0e0e0"
+                android:textColor="@android:color/background_dark" />
+            <TextView
+                android:text="Senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+IdLogar/lblSenha"
+                android:layout_marginTop="14.5dp"
+                android:textColor="#000000" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+IdLogar/txtSenha"
+                android:backgroundTint="#ffe0e0e0"
+                android:background="#ffe0e0e0"
+                android:inputType="none|textPassword"
+                android:textColor="@android:color/background_dark" />
+            <TextView
+                android:gravity="center"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+IdLogar/lblMensagem"
+                android:textColor="@android:color/holo_red_dark"
+                android:padding="10dp"
+                android:backgroundTint="#00000000"
+                android:textSize="11dp"
+                android:textStyle="italic"
+                android:typeface="sans" />
+            <Button
+                android:text="Acessar"
+                android:id="@+IdLogar/btnLogar"
+                android:background="#ff0277bd"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:layout_width="108.5dp"
+                android:layout_height="36.0dp"
+                android:layout_marginLeft="0.0dp"
+                android:layout_marginRight="0.0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:verticalScrollbarPosition="left"
+                android:layout_marginTop="0.5dp"
+                android:foregroundGravity="top"
+                android:scrollIndicators="none"
+                android:layout_marginBottom="5dp" />
+            <Button
+                android:text="Cadastrar"
+                android:id="@+IdLogar/btnNovo"
+                android:background="#ff0277bd"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:layout_width="108.5dp"
+                android:layout_height="36.0dp"
+                android:layout_marginTop="0.0dp"
+                android:layout_marginLeft="0.0dp"
+                android:layout_marginRight="0.0dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|center"
+                android:foregroundGravity="bottom" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

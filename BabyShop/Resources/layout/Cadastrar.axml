@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <TextView
+        android:text="CADASTRAR"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="360.5dp"
+        android:layout_height="wrap_content"
+        android:background="#ff0277bd"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="0.0dp"
+        android:layout_marginRight="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginBottom="10.5dp" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+idCadastrar/lblMensagem"
+        android:gravity="center"
+        android:textColor="#0277BD"
+        android:layout_marginBottom="11.0dp"
+        android:background="@android:color/background_light"
+        android:textStyle="italic"
+        android:layout_marginTop="4.5dp"
+        android:textAllCaps="false" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="121.0dp"
+        android:id="@+idCadastrar/llDadosAcesso"
+        android:background="@android:color/background_light"
+        android:layout_marginLeft="5.0dp"
+        android:layout_marginRight="4.0dp"
+        android:layout_marginBottom="10.0dp">
+        <TextView
+            android:text="Dados para Acesso"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblDadosAcesso"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:text="E-mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblEmail"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtEmail"
+            android:background="#ffe0e0e0" />
+        <TextView
+            android:text="Senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblSenha"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtSenha"
+            android:backgroundTint="#ffe0e0e0"
+            android:background="#ffe0e0e0"
+            android:inputType="none|textPassword" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="290.5dp"
+        android:id="@+idCadastrar/llDadosPessoais"
+        android:layout_marginTop="1.5dp"
+        android:background="@android:color/background_light"
+        android:layout_marginLeft="5.0dp"
+        android:layout_marginRight="4.0dp">
+        <TextView
+            android:text="Dados Pessoais"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblDadosPessoais"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:text="CPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblCPF"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtCPF"
+            android:background="#ffe0e0e0" />
+        <TextView
+            android:text="Nome Completo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblNomeCompleto"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtNomeCompleto"
+            android:background="#ffe0e0e0" />
+        <TextView
+            android:text="Estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblEstado"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtEstado"
+            android:background="#ffe0e0e0" />
+        <TextView
+            android:text="Municipio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblMunicipio"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtMunicipio"
+            android:background="#ffe0e0e0" />
+        <TextView
+            android:text="Endereço"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblEndereco"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtEndereco"
+            android:background="#ffe0e0e0" />
+        <TextView
+            android:text="Telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/lblTelefone"
+            android:textColor="#000000" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+idCadastrar/txtTelefone"
+            android:phoneNumber="true"
+            android:background="#ffe0e0e0" />
+    </LinearLayout>
+    <Button
+        android:text="Salvar"
+        android:layout_width="108.5dp"
+        android:layout_height="36.0dp"
+        android:id="@+idCadastrar/btnSalvar"
+        android:layout_marginLeft="137.5dp"
+        android:layout_marginRight="103.0dp"
+        android:background="#ff0277bd"
+        android:textAllCaps="false"
+        android:layout_marginTop="9.0dp"
+        android:textColor="#FFFFFF"
+        android:foregroundGravity="center"
+        android:gravity="center" />
+</LinearLayout>

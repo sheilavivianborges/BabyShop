@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BabyShop</string>
+  <string name="MSG00001">Por favor, preencher o e-mail e/ou senha</string>
+  <string name="MSG00002">Não foi possível entrar, pois o e-mail e/ou senha não conferem</string>
+  <string name="MSG00003">CPF existente</string>
+  <string name="MSG00004">Todos os dados do formulário são obrigatórios. Por favor preencher os dados faltantes</string>
+  <string name="MSG00005">Dados salvo com sucesso!</string>
+  <string name="MSG00006">Tem certeza que deseja excluir a conta?</string>
+  <string name="MSG00007">Conta excluída com sucesso.</string>
+</resources>
