@@ -57,16 +57,21 @@ namespace BabyShop
 
             #endregion
 
+            // Chamada ao método para popular os campos na tela
             PopularLayout( );
         }
     }
 
     public partial class AtualizarActivity
     {
+        // Instância da classe que faz a comunicação com a API
         IClienteWS contaWS = ClienteService.GetInstance( );
 
         #region [ Metodos ]
 
+        /// <summary>
+        /// Popula os campos na tela
+        /// </summary>
         private void PopularLayout( )
         {
             string contraSerializada = Intent.GetStringExtra( "conta" );
@@ -74,7 +79,10 @@ namespace BabyShop
             if ( contraSerializada == null && String.IsNullOrEmpty( contraSerializada ) )
                 this.Finish( );
 
+            // Converte para ClienteViewModel
             ClienteViewModel cliente = JsonConvert.DeserializeObject<ClienteViewModel>( contraSerializada );
+
+            // Popula os campos do cliente
             IdCliente.Text = cliente.Id.ToString( );
             NomeCompleto.Text = cliente.NomeCompleto;
             CPF.Text = cliente.CPF;
@@ -88,15 +96,24 @@ namespace BabyShop
             
         }
 
+        /// <summary>
+        /// Método para salvar os dados de um cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected async void SalvarAsync( object sender, EventArgs e )
         {
             Mensagem.Text = "";
+
+            // Valida o formulário
             if ( !ValidarForm( ) )
             {
+                // Obtém a mensagem de erro do arquivo de resorces
                 Mensagem.Text = Resources.GetString( Resource.String.MSG00004 );
                 return;
             }
 
+            // Em caso de sucesso, monta um objeto com os dados do cliente para envio a API
             ClienteViewModel model = new ClienteViewModel( );
             model.Id = Convert.ToInt32( IdCliente.Text );
             model.NomeCompleto = NomeCompleto.Text;
@@ -109,20 +126,33 @@ namespace BabyShop
             model.Telefone = Telefone.Text;
             model.DataCadastro = DateTime.Parse( DataCadastro.Text );
 
+            // Envia os dados do cliente para a camada de serviços fazer a chamda na API
             ClienteViewModel conta = await contaWS.AtualizarClienteAsync( model );
 
             Toast.MakeText( this, Resources.GetString( Resource.String.MSG00005 ), ToastLength.Long ).Show( );
 
         }
 
+        /// <summary>
+        /// Método para excluir um cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Excluir( object sender, EventArgs e )
         {
             AlertDialog.Builder alert = new AlertDialog.Builder( this );
             alert.SetTitle( "Salvar" );
+
+            // Obtém a mensagem do arquivo se resources
             alert.SetMessage( Resources.GetString( Resource.String.MSG00006 ) );
+
+            // Exibe confirmação ao usuário, em caso positivo chama a API para exclusão do cliente
             alert.SetPositiveButton( "Sim", delegate
             {
+                // Envia os dados do cliente para a camada de serviços fazer a chamda na API
                 contaWS.ExcluirClienteAsync( Convert.ToInt32( IdCliente.Text ) );
+
+                // Obtém e exibe mensagem do arquivo de resources
                 Toast.MakeText( this, Resources.GetString( Resource.String.MSG00007 ), ToastLength.Long ).Show( );
                 alert.Dispose( );
                 this.Finish( );
@@ -136,7 +166,10 @@ namespace BabyShop
 
         }
 
-
+        /// <summary>
+        /// Método que efetua a validação de um formulário de Cliente
+        /// </summary>
+        /// <returns>True/False indicando se o formulário está válido</returns>
         protected bool ValidarForm( )
         {
 

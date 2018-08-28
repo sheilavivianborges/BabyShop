@@ -12,6 +12,9 @@ using Android.Widget;
 
 namespace BabyShop.ViewModel
 {
+    /// <summary>
+    /// Classe que representa os dados de um cliente na UI
+    /// </summary>
     public class ClienteViewModel
     {
         public int Id { get; set; }

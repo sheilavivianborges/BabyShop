@@ -12,6 +12,9 @@ using Android.Widget;
 
 namespace BabyShop.ViewModel
 {
+    /// <summary>
+    /// Classe que representa os dados de acesso de um cliente na UI
+    /// </summary>
     public class LogarViewModel
     {
         public string Email { get; set; }

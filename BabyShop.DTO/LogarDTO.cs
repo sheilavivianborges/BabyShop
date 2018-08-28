@@ -12,6 +12,9 @@ using Android.Widget;
 
 namespace BabyShop.DTO
 {
+    /// <summary>
+    /// DTO para comunicação de dados de acesso de cliente entre a UI e a API
+    /// </summary>
     public class LogarDTO
     {
         public string Email { get; set; }

@@ -14,6 +14,9 @@ using Java.Lang;
 
 namespace BabyShop.ViewModel
 {
+    /// <summary>
+    /// Classe para utilitários de máscara de campos na UI
+    /// </summary>
     public class Mask : Java.Lang.Object, ITextWatcher
     {
         private readonly EditText _editText;
@@ -21,12 +24,22 @@ namespace BabyShop.ViewModel
         bool isUpdating;
         string old = "";
 
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="editText">String a ser aplicada a máscara</param>
+        /// <param name="mask">Máscara a ser aplicada na string</param>
         public Mask( EditText editText, string mask )
         {
             _editText = editText;
             _mask = mask;
         }
 
+        /// <summary>
+        /// Remove a máscara de uma string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static string Unmask( string s )
         {
             return s.Replace( ".", "" ).Replace( "-", "" )
@@ -42,6 +55,13 @@ namespace BabyShop.ViewModel
         {
         }
 
+        /// <summary>
+        /// Aplicar a máscara
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="start"></param>
+        /// <param name="before"></param>
+        /// <param name="count"></param>
         public void OnTextChanged( ICharSequence s, int start, int before, int count )
         {
             string str = Unmask( s.ToString( ) );

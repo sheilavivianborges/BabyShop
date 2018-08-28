@@ -12,6 +12,9 @@ using Android.Widget;
 
 namespace BabyShop.DTO
 {
+    /// <summary>
+    /// DTO para comunicação de dados de Cliente entre a UI e a API
+    /// </summary>
     public class ClienteDTO
     {
         public int Id { get; set; }

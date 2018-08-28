@@ -3,6 +3,9 @@ using BabyShop.ViewModel;
 
 namespace BabyShop.Servicos.Contratos
 {
+    /// <summary>
+    /// Interface contendo os métodos disponibilizados pela API
+    /// </summary>
     public interface IClienteWS
     {
         Task<ClienteViewModel> ObterClienteAsync( LogarViewModel model );
